@@ -19,6 +19,14 @@ Este trabalho apresenta um estudo de aplicação de redes neurais para inferênc
 <h2 id="objetivos">Objetivos do trabalho</h2>
 
 <h2 id="metodologia">Metodologia</h2>
+A metodologia utilizada neste trabalho inclui a realização de cinco etapas envolvidas no desenvolvimento do tema proposto: i) preparação e análise dos dados; ii) implementação da rede neural LSTM; iii) treinamento dos modelos Univariado e Multivariado; e iv) avaliação de métricas e geração de resultados.
+- **Preparação e análise dos dados:**
+
+- **Implementação da rede neural:**
+
+- **Treinamento do modelo LSTM Univariado:**
+
+- **Treinamento do modelo LSTM Multivariado:**
 
 <h2 id="resultados">Resultados</h2>
 
