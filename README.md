@@ -22,7 +22,8 @@ Este trabalho apresenta um estudo de aplicação de redes neurais para inferênc
 A metodologia utilizada neste trabalho inclui a realização de cinco etapas envolvidas no desenvolvimento do tema proposto: i) preparação e análise dos dados; ii) implementação da rede neural LSTM; iii) treinamento dos modelos Univariado e Multivariado; e iv) avaliação de métricas e geração de resultados.
 
 - **Preparação e análise dos dados:**
-Para a aplicação do modelo proposto, foram selecionadas três commodities ligadas ao setor agropecuário brasileiro: milho, soja e boi. Os dados consistem nas series históricas dos indicadores diários de preços fornecidos pela Escola Superior de Agricultura Luiz de Queiroz (Esalq), por meio do banco de dados do Centro de Estudos Avançados em Economia Aplicada (CEPEA) (https://www.cepea.esalq.usp.br/br/consultas-ao-banco-de-dados-do-site.aspx).
+
+Para a aplicação do modelo proposto, foram selecionadas três commodities ligadas ao setor agropecuário brasileiro: milho, soja e boi. Os dados consistem nas series históricas dos indicadores diários de preços fornecidos pela Escola Superior de Agricultura Luiz de Queiroz (Esalq), por meio do banco de dados do Centro de Estudos Avançados em Economia Aplicada [(CEPEA)](https://www.cepea.esalq.usp.br/br/consultas-ao-banco-de-dados-do-site.aspx).
 Também foi incluído no estudo os dados de um indicador global de commodities, o Commodity Research Bureau Index (CRB), que é um índice que atua como um indicador representativo dos mercados globais de commodities. Este índice é calculado como uma média dos preços de commodities individuais, formado por 19 commodities, classificadas em 4 grupos, com diferentes pesos: Energia: 39%, Agricultura: 41%, Metais preciosos: 7%, Metais básicos e industriais: 13% (https://tradingeconomics.com/commodity/crb). O CRB busca medir a direção do preço agregado de vários setores de commodities e é utilizado para projetar movimentos direcionais dos preços de comercialização de commodities globais (https://www.investopedia.com/terms/c/crb.asp). A série histórica do CRB foi adquirida a partir do site Br Investing.com: https://br.investing.com/indices/thomson-reuters---jefferies-crb.
 Os datasets utilizados neste trabalho estão disponíveis em formato csv no diretório data.
 O CEPEA fornece os preços das commodities cotados em real (brl) e dólar (usd). Dado que as commodities brasileiras tem forte influência do dólar, por estarem inseridas no mercado global de commodities, e dado que o CRB é um indicador também referenciado em dólar, constatou-se uma maior correlação entre as cotações das commodities cotadas em dólar e o CRB. O notebook modelo-lstm-multivariado.ipynb ilustra uma análise das correlações entre as séries estudadas.
@@ -33,10 +34,13 @@ Na preparação dos dados foi realizada ainda a verificação e exclusão de dad
 - **Implementação da rede neural:**
 
 
+
 - **Treinamento do modelo LSTM Univariado:**
 
 
+
 - **Treinamento do modelo LSTM Multivariado:**
+
 
 
 <h2 id="resultados">Resultados</h2>
