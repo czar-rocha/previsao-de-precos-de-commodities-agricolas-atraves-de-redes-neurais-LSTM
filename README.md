@@ -49,10 +49,13 @@ A otimização dos parâmetros foi realizada a partir dos dados de treino e vali
 
 | Parâmetros | Configuração inicial | Configuração após otimização |
 |---|---|---|
-| Univariate-LSTM | 0.0004030796 | 0.0185444448 |
-| Multivariate-RNN | [High,Volume,Close] | 0.0002176880 |
-| Multivariate-GRU | [High,Volume,Close] | 0.0002792562 |
-| Multivariate-LSTM | [High,Volume,Close] | 0.0004895794 |
+| Window size | 9 | 12 |
+| Units | 140 | 100 |
+| Dropout | 0.2 | 0.2 |
+| Epochs | 120 | 180 |
+| MSE | 0.023 | 0.021 |
+| rMSE | 0.152 | 0.147 |
+| MAPE | 16.65 | 16.33 |
 
 
 - **Treinamento do modelo LSTM Multivariado:**
