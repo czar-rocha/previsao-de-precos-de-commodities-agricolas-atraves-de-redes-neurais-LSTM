@@ -43,7 +43,7 @@ Após definir as camadas da rede, foram especificadas as configurações de apre
 
 ### Treinamento do modelo LSTM Univariado
 
-O notebook modelo-lstm-univariado.ipynb mostra o processo de desenvolvimento e teste de performance do modelo univariado. Este modelo foi treinado utilizando apenas a feature de cotação do milho. A série temporal foi dividida em 60-20-20 subconjuntos, onde 60% dos dados foram utilizados para treinamento, 20% para validação  e otimização de parâmetros, e os 20% restantes foram usados para teste.
+O notebook modelo-lstm-univariado.ipynb mostra o desenvolvimento e teste do modelo univariado. Este modelo foi treinado utilizando apenas a feature de cotação do milho. A série temporal foi dividida em 60-20-20 subconjuntos, onde 60% dos dados foram utilizados para treinamento, 20% para validação  e otimização de parâmetros, e os 20% restantes foram usados para teste.
 
 A otimização dos parâmetros foi realizada a partir dos dados de treino e validação. A Tabela 1 mostra os parâmetros utilizados na otimização e os resultados alcançados após todas as iterações.
 
@@ -56,11 +56,27 @@ A otimização dos parâmetros foi realizada a partir dos dados de treino e vali
 | MSE | 0.023 | 0.021 |
 | rMSE | 0.152 | 0.147 |
 | MAPE | 16.65 | 16.33 |
+Tabela 1: Resultados da otimização do modelo univariado realizado com os dados de treino e validação
 
+A configuração inicial dos parâmetros foi realizada de forma empírica através de iterações experimentais. Após isso, foi definido também de forma empírica, um range de valores em torno da configuração inicial, sendo estes valores testados iterativamente para identificação dos hiper-parâmetros ótimos, através do menor MSE gerado ao fim do processo.
 
-- **Treinamento do modelo LSTM Multivariado:**
+### Treinamento do modelo LSTM Multivariado
 
+O notebook modelo-lstm-multivariado.ipynb mostra desenvolvimento e teste do modelo multivariado. O modelo multivariado foi treinado a partir das features do milho, soja, boi e do CRB. Para o treinamento, cada série temporal foi dividida em 60-20-20 subconjuntos, onde 60% dos dados foram usados para treinamento, 20% para validação e otimização de parâmetros, e os 20% restantes foram usados para teste.
 
+Para ajustar os parâmetros de treinamento e diminuir o erro do modelo, foram realizadas otimizações de hiper-parâmetros através de combinações de diferentes valores. A Tabela 2 mostra os resultados da otimização realizada com os dados de treino e validação.
+
+| Parâmetros | Configuração inicial | Configuração após otimização |
+|---|---|---|
+| Window size | 9 | 15 |
+| Units | 140 | 120 |
+| Dropout | 0.2 | 0.2 |
+| Epochs | 120 | 160 |
+| MSE | 0.026 | 0.021 |
+| rMSE | 0.163 | 0.147 |
+| MAPE | 16.78 | 16.35 |
+
+Tabela 2: Resultados da otimização do modelo multivariado realizado com os dados de treino e validação
 
 <h2 id="resultados">Resultados</h2>
 
