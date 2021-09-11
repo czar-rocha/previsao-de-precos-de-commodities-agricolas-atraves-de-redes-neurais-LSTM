@@ -48,8 +48,8 @@ O notebook modelo-lstm-univariado.ipynb mostra o processo de desenvolvimento e t
 A otimização dos parâmetros foi realizada a partir dos dados de treino e validação. A Tabela 1 mostra os parâmetros utilizados na otimização e os resultados alcançados após todas as iterações.
 
 | Parâmetros | Configuração inicial | Configuração após otimização |
-|---|---|---|---|---|
-| Univariate-LSTM | Close | 0.0004030796 | 0.0185444448 |
+|---|---|---|
+| Univariate-LSTM | 0.0004030796 | 0.0185444448 |
 | Multivariate-RNN | [High,Volume,Close] | 0.0002176880 |
 | Multivariate-GRU | [High,Volume,Close] | 0.0002792562 |
 | Multivariate-LSTM | [High,Volume,Close] | 0.0004895794 |
