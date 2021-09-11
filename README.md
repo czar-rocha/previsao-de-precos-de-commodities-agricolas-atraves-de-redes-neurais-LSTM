@@ -34,12 +34,25 @@ Dessa forma, por haver maior correlação entre as variáveis, foram considerada
 Na preparação dos dados foi realizada ainda a verificação e exclusão de dados nulos, bem como foi adicionada uma feature contendo uma versão dos dados normalizados para valores entre 0 e 1, facilitando assim algumas análises sobre as variáveis.
 
 
-- **Implementação da rede neural:**
+### Implementação da rede neural
+
+A implementação da rede LSTM foi realizada utilizando a biblioteca Keras, que é um framework prático e intuitivo para construir e treinar modelos de redes neurais. A rede foi configurada com 3 camadas totalmente conectadas. Foram adicionadas também camadas de eliminação (dropout) para evitar o problema de overfitting devido à rede densa, portanto, após cada camada LSTM oculta, foi criada uma camada dropout que garante que a rede neural não dependa inteiramente de um determinado neurônio.
+
+Após definir as camadas da rede, foram especificadas as configurações de aprendizagem. Foi definido o otimizador adam com taxa de aprendizado de 0,01, que é o valor padrão para o otimizador adam, e o erro médio quadrático (MSE, do inglês Mean Squared Error) foi definido como função de perda.
 
 
+### Treinamento do modelo LSTM Univariado
 
-- **Treinamento do modelo LSTM Univariado:**
+O notebook modelo-lstm-univariado.ipynb mostra o processo de desenvolvimento e teste de performance do modelo univariado. Este modelo foi treinado utilizando apenas a feature de cotação do milho. A série temporal foi dividida em 60-20-20 subconjuntos, onde 60% dos dados foram utilizados para treinamento, 20% para validação  e otimização de parâmetros, e os 20% restantes foram usados para teste.
 
+A otimização dos parâmetros foi realizada a partir dos dados de treino e validação. A Tabela 1 mostra os parâmetros utilizados na otimização e os resultados alcançados após todas as iterações.
+
+| Parâmetros | Configuração inicial | Configuração após otimização |
+|---|---|---|---|---|
+| Univariate-LSTM | Close | 0.0004030796 | 0.0185444448 |
+| Multivariate-RNN | [High,Volume,Close] | 0.0002176880 |
+| Multivariate-GRU | [High,Volume,Close] | 0.0002792562 |
+| Multivariate-LSTM | [High,Volume,Close] | 0.0004895794 |
 
 
 - **Treinamento do modelo LSTM Multivariado:**
