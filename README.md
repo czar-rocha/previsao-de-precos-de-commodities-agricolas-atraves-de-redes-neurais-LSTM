@@ -21,7 +21,7 @@ Este trabalho apresenta um estudo de aplicação de redes neurais para inferênc
 <h2 id="metodologia">Metodologia</h2>
 A metodologia utilizada neste trabalho inclui a realização de cinco etapas envolvidas no desenvolvimento do tema proposto: i) preparação e análise dos dados; ii) implementação da rede neural LSTM; iii) treinamento dos modelos Univariado e Multivariado; e iv) avaliação de métricas e geração de resultados.
 
-## Preparação e análise dos dados
+### Preparação e análise dos dados
 
 Para a aplicação do modelo proposto, foram selecionadas três commodities ligadas ao setor agropecuário brasileiro: milho, soja e boi. Os dados consistem nas series históricas dos indicadores diários de preços fornecidos pela Escola Superior de Agricultura Luiz de Queiroz (Esalq), por meio do banco de dados do Centro de Estudos Avançados em Economia Aplicada [(CEPEA)](https://www.cepea.esalq.usp.br/br/consultas-ao-banco-de-dados-do-site.aspx).
 
