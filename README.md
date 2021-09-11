@@ -1,7 +1,7 @@
-# BI MASTER - ICA - PUC-Rio
-## Previsão de preços de commodities agrícolas através de redes neurais LSTM
+# Previsão de preços de commodities agrícolas através de redes neurais LSTM
+## BI MASTER - ICA - PUC-Rio
 
-### Índice
+## Índice
   
 - [Resumo](#resumo)
 - [Introdução](#introducao)
