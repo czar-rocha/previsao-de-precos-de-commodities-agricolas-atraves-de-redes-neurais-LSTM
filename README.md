@@ -54,15 +54,16 @@ A otimização dos parâmetros foi realizada a partir dos dados de treino e vali
 | Dropout | 0.2 | 0.2 |
 | Epochs | 120 | 180 |
 | MSE | 0.023 | 0.021 |
-| rMSE | 0.152 | 0.147 |
+| RMSE | 0.152 | 0.147 |
 | MAPE | 16.65 | 16.33 |
+
 Tabela 1: Resultados da otimização do modelo univariado realizado com os dados de treino e validação
 
 A configuração inicial dos parâmetros foi realizada de forma empírica através de iterações experimentais. Após isso, foi definido também de forma empírica, um range de valores em torno da configuração inicial, sendo estes valores testados iterativamente para identificação dos hiper-parâmetros ótimos, através do menor MSE gerado ao fim do processo.
 
 ### Treinamento do modelo LSTM Multivariado
 
-O notebook modelo-lstm-multivariado.ipynb mostra desenvolvimento e teste do modelo multivariado. O modelo multivariado foi treinado a partir das features do milho, soja, boi e do CRB. Para o treinamento, cada série temporal foi dividida em 60-20-20 subconjuntos, onde 60% dos dados foram usados para treinamento, 20% para validação e otimização de parâmetros, e os 20% restantes foram usados para teste.
+O notebook modelo-lstm-multivariado.ipynb mostra o desenvolvimento e teste do modelo multivariado. O modelo multivariado foi treinado a partir das features do milho, soja, boi e do CRB. Para o treinamento, cada série temporal foi dividida em 60-20-20 subconjuntos, onde 60% dos dados foram usados para treinamento, 20% para validação e otimização de parâmetros, e os 20% restantes foram usados para teste.
 
 Para ajustar os parâmetros de treinamento e diminuir o erro do modelo, foram realizadas otimizações de hiper-parâmetros através de combinações de diferentes valores. A Tabela 2 mostra os resultados da otimização realizada com os dados de treino e validação.
 
@@ -73,13 +74,29 @@ Para ajustar os parâmetros de treinamento e diminuir o erro do modelo, foram re
 | Dropout | 0.2 | 0.2 |
 | Epochs | 120 | 160 |
 | MSE | 0.026 | 0.021 |
-| rMSE | 0.163 | 0.147 |
+| RMSE | 0.163 | 0.147 |
 | MAPE | 16.78 | 16.35 |
 
 Tabela 2: Resultados da otimização do modelo multivariado realizado com os dados de treino e validação
 
 <h2 id="resultados">Resultados</h2>
 
+O desempenho de previsão dos modelos LSTM foi verificado usando os dados do conjunto de teste. O erro quadrático médio (MSE) foi selecionado como a principal medida para avaliar o desempenho dos modelos.  O MSE dos modelos LSTM univariado e multivariado foi de 0,036 e 0,037, respectivamente. Para fins de verificação das métricas, também foi gerado a raiz do erro médio quadrado (RMSE) e o erro percentual médio absoluto (MAPE) para ambos os modelos.
+
+| Modelo | MSE | RMSE | MAPE |
+|---|---|---|---|
+| LSTM-Univariado | 0.038 | 0.194 | 28.17 |
+| LSTM-Multivariado | 0.038 | 0.195 | 28.04% |
+
+Tabela 3: Performance de previsão dos modelos aplicado aos dados de teste.
+
+Conforme pode ser visto na Tabela 3, o modelo LSTM univariado teve um desempenho levemente melhor do que o modelo multivariado. Dessa forma, a inclusão de outras variáveis relacionadas a cotação do milho não teve relevância para a performance do modelo. Por outro lado, o modelo multivariado permitiu observar relações entre as variáveis, que se mostraram interessantes.
+
 <h2 id="conclusoes">Conclusões</h2>
+
+Este trabalho propôs uma abordagem de rede neural LSTM univariada e multivariada para previsão dos preços do milho, uma das principais commodities do setor agropecuário brasileiro. Os modelos propostos passaram por ajustes de hiper parâmetros e apresentaram um bom desempenho nos dados de teste. Os modelos univariado e multivariado apresentaram performances semelhantes, dessa forma, a inclusão de outras variáveis ao estudo não teve relevância na performance do modelo para a previsão das cotações do milho, no entanto a abordagem multivariada agregou conhecimento ao permitir a observância das relações entre as variáveis.
+
+Há espaço para que a abordagem sugerida neste trabalho possa ser testificada de forma mais detalhada ao se fazer análises comparativas com outros métodos de inferência em redes neurais. Dessa forma sugere-se como trabalhos futuros a inclusão de outros métodos de inferência aplicados à dinâmica de preços do milho. 
+
 
 <h2 id="referencias">Referências</h2>
