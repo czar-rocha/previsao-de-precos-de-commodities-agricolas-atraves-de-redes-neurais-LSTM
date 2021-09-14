@@ -24,7 +24,7 @@ Como objetivos específicos, tem-se os seguintes itens: (I) revisão bibliográf
 
 <h2 id="metodologia">Metodologia</h2>
 
-A metodologia utilizada neste trabalho inclui a realização de cinco etapas envolvidas no desenvolvimento do tema proposto: i) preparação e análise dos dados; ii) implementação da rede neural LSTM; iii) treinamento dos modelos Univariado e Multivariado; e iv) avaliação de métricas e geração de resultados.
+A metodologia utilizada neste trabalho inclui a realização de cinco etapas: i) preparação e análise dos dados; ii) implementação da rede neural LSTM; iii) treinamento dos modelos Univariado e Multivariado; e iv) avaliação de métricas e geração de resultados.
 
 ### I) Preparação e análise dos dados
 
