@@ -1,4 +1,4 @@
-# Previsão de preços de commodities agrícolas através de redes neurais LSTM
+# Previsão de preços do milho através de redes neurais LSTM
 ## BI MASTER - ICA - PUC-Rio
 
 ## Índice
