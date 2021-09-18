@@ -26,11 +26,11 @@ Este trabalho apresenta um estudo de aplicação de redes neurais para inferênc
 O objetivo geral deste trabalho é empregar técnicas de redes neurais LSTM para propor uma abordagem de previsão para as cotações do milho, utilizando-se modelos univariados e multivariados com base nos dados divulgados pelo CEPEA.
 Como objetivos específicos, tem-se os seguintes itens: (I) revisão bibliográfica de trabalhos relacionados a aplicação de redes neurais para inferência de preços de commodities agrícolas; (II) preparação dos dados; (III) criação de uma rede neural LSTM e treinamento de modelos univariado e multivariado; e (IV) avaliação de métricas, geração de resultados e conclusões.
 
-## 1. Modelagem
+### 2. Modelagem
 
 A modelagem deste projeto está organizada em uma metodologia de trabalho composta por cinco etapas: i) preparação e análise dos dados; ii) implementação da rede neural LSTM; iii) treinamento dos modelos Univariado e Multivariado; e iv) avaliação de métricas e geração de resultados.
 
-### I) Preparação e análise dos dados
+#### i) Preparação e análise dos dados
 
 Para a aplicação do modelo proposto, foram selecionadas três commodities ligadas ao setor agropecuário brasileiro: milho, soja e boi. Os dados consistem nas series históricas dos indicadores diários de preços fornecidos pela Escola Superior de Agricultura Luiz de Queiroz (Esalq), por meio do banco de dados do Centro de Estudos Avançados em Economia Aplicada [(CEPEA)](https://www.cepea.esalq.usp.br/br/consultas-ao-banco-de-dados-do-site.aspx).
 
@@ -42,14 +42,14 @@ O CEPEA fornece os preços das commodities cotados em real (brl) e dólar (usd).
 Dessa forma, por haver maior correlação entre as variáveis, foram consideradas somente as cotações em dólar para as abordagens de previsão univarida e multivariada.
 Na preparação dos dados foi realizada ainda a verificação e exclusão de dados nulos, bem como foi adicionada uma feature contendo uma versão dos dados normalizados para valores entre 0 e 1, facilitando assim algumas análises sobre as variáveis.
 
-### II) Implementação da rede neural
+#### ii) Implementação da rede neural
 
 A implementação da rede LSTM foi realizada utilizando a biblioteca Keras, que é um framework prático e intuitivo para construir e treinar modelos de redes neurais. A rede foi configurada com 3 camadas totalmente conectadas. Foram adicionadas também camadas de eliminação (dropout) para evitar o problema de overfitting devido à rede densa, portanto, após cada camada LSTM oculta, foi criada uma camada dropout que garante que a rede neural não dependa inteiramente de um determinado neurônio.
 
 Após definir as camadas da rede, foram especificadas as configurações de aprendizagem. Foi definido o otimizador adam com taxa de aprendizado de 0,01, que é o valor padrão para o otimizador adam, e o erro médio quadrático (MSE, do inglês Mean Squared Error) foi definido como função de perda.
 
 
-### III) Treinamento do modelo LSTM Univariado
+#### iii) Treinamento do modelo LSTM Univariado
 
 O notebook [modelo_lstm_univariado.ipynb](modelo-lstm-univariado/modelo_lstm_univariado.ipynb) mostra o desenvolvimento e teste do modelo univariado. Este modelo foi treinado utilizando apenas a feature de cotação do milho. A série temporal foi dividida em 60-20-20 subconjuntos, onde 60% dos dados foram utilizados para treinamento, 20% para validação  e otimização de parâmetros, e os 20% restantes foram usados para teste.
 
@@ -69,7 +69,7 @@ Tabela 1: Resultados da otimização do modelo univariado realizado com os dados
 
 A configuração inicial dos parâmetros foi realizada de forma empírica através de iterações experimentais. Após isso, foi definido também de forma empírica, um range de valores em torno da configuração inicial, sendo estes valores testados iterativamente para identificação dos hiper-parâmetros ótimos, através do menor MSE gerado ao fim do processo.
 
-### IV) Treinamento do modelo LSTM Multivariado
+#### iv) Treinamento do modelo LSTM Multivariado
 
 O notebook [modelo_lstm_multivariado.ipynb](modelo-lstm-multivariado/modelo_lstm_multivariado.ipynb) mostra o desenvolvimento e teste do modelo multivariado. O modelo multivariado foi treinado a partir das features do milho, soja, boi e do CRB. Para o treinamento, cada série temporal foi dividida em 60-20-20 subconjuntos, onde 60% dos dados foram usados para treinamento, 20% para validação e otimização de parâmetros, e os 20% restantes foram usados para teste.
 
@@ -87,7 +87,7 @@ Para ajustar os parâmetros de treinamento e diminuir o erro do modelo, foram re
 
 Tabela 2: Resultados da otimização do modelo multivariado realizado com os dados de treino e validação
 
-<h2 id="resultados">Resultados</h2>
+### 3. Resultados
 
 O desempenho de previsão dos modelos LSTM foi verificado usando os dados do conjunto de teste. O erro quadrático médio (MSE) foi selecionado como a principal medida para avaliar o desempenho dos modelos.  O MSE dos modelos LSTM univariado e multivariado foi de 0,036 e 0,037, respectivamente. Para fins de verificação das métricas, também foi gerado a raiz do erro médio quadrado (RMSE) e o erro percentual médio absoluto (MAPE) para ambos os modelos.
 
@@ -100,13 +100,13 @@ Tabela 3: Performance de previsão dos modelos aplicado aos dados de teste.
 
 Conforme pode ser visto na Tabela 3, o modelo LSTM univariado teve um desempenho levemente melhor do que o modelo multivariado. Dessa forma, a inclusão de outras variáveis relacionadas a cotação do milho não teve relevância para a performance do modelo. Por outro lado, o modelo multivariado permitiu observar relações entre as variáveis, que se mostraram interessantes.
 
-<h2 id="conclusoes">Conclusões</h2>
+### 4. Conlusões
 
 Este trabalho propôs uma abordagem de rede neural LSTM univariada e multivariada para previsão dos preços do milho, uma das principais commodities do setor agropecuário brasileiro. Os modelos propostos passaram por ajustes de hiper parâmetros e apresentaram um bom desempenho nos dados de teste. Os modelos univariado e multivariado apresentaram performances semelhantes, dessa forma, a inclusão de outras variáveis ao estudo não teve relevância na performance do modelo para a previsão das cotações do milho, no entanto a abordagem multivariada agregou conhecimento ao permitir a observância das relações entre as variáveis.
 
 Há espaço para que a abordagem sugerida neste trabalho possa ser testificada de forma mais detalhada ao se fazer análises comparativas com outros métodos de inferência em redes neurais. Dessa forma sugere-se como trabalhos futuros a inclusão de outros métodos de inferência aplicados à dinâmica de preços do milho. 
 
 
-<h2 id="referencias">Referências</h2>
+### Referências
 
 
