@@ -2,23 +2,26 @@
 #### Aluno: [Junior Rocha](https://github.com/czar-rocha)
 #### Orientadora: [Manoela Kohler](https://github.com/manoelakohler)
 
-## Índice
-  
-- [Resumo](#resumo)
-- [Introdução](#introducao)
-- [Objetivos do trabalho](#objetivos)
-- [Metodologia](#metodologia)
-- [Resultados](#resultados)
-- [Conclusões](#conclusoes)
-- [Referências](#referencias)
+---
 
-<h2 id="resumo">Resumo</h2>
+Trabalho apresentado ao curso [BI MASTER](https://ica.puc-rio.ai/bi-master) como pré-requisito para conclusão de curso e obtenção de crédito na disciplina "Projetos de Sistemas Inteligentes de Apoio à Decisão".
+
+[modelo_lstm_multivariado.ipynb](modelo-lstm-multivariado/modelo_lstm_multivariado.ipynb)
+
+[modelo_lstm_univariado.ipynb](modelo-lstm-univariado/modelo_lstm_univariado.ipynb)
+
+
+### Resumo
 
 Este trabalho apresenta um estudo de aplicação de redes neurais para inferência de preços do milho, uma das principais commodities brasileiras. O setor de commodities agrícolas tem grande relevância na economia brasileira, pois está inserido no comércio global de mercadorias e possui uma parcela significativa de valor nas suas negociações. Na literatura, há diversas pesquisas no campo específico da previsão de commodities, seja utilizando métodos clássicos, modelos de aprendizagem de máquina ou redes neurais. Métodos clássicos, por serem técnicas generalizadas, estão mais suscetíveis a falhas ao tentar se adaptar às características voláteis e não estacionárias do mercado de commodities. Já as redes neurais profundas tem se mostrado uma alternativa eficiente para a previsão de comportamentos voláteis de forma adaptável e dinâmica. O método proposto neste trabalho consiste em utilizar redes neurais recorrentes do tipo Long Short-Term Memory (LSTM) para implementação de modelos univariado e multivariado para previsão de preços do milho. A partir de dados do CEPEA (Centro de Estudos Avançados em Economia Aplicada) foram obtidas as series históricas de três commodities do setor agropecuário brasileiro: milho, soja e boi gordo. Também foi incluído no estudo os dados de um indicador global de commodities, o Commodity Research Bureau Index (CRB). No processo de treinamento da rede buscou-se minimizar a função de perda através da otimização dos hiper-parâmetros. Os resultados de previsão sobre as cotações do milho mostraram uma boa performance nos dados de teste.
 
-<h2 id="introducao">Introdução</h2>
+### Abstract
 
-<h2 id="objetivos">Objetivos do trabalho</h2>
+
+### 1. Introdução
+
+
+#### Objetivos do trabalho
 
 O objetivo geral deste trabalho é empregar técnicas de redes neurais LSTM para propor uma abordagem de previsão para as cotações do milho, utilizando-se modelos univariados e multivariados com base nos dados divulgados pelo CEPEA.
 Como objetivos específicos, tem-se os seguintes itens: (I) revisão bibliográfica de trabalhos relacionados a aplicação de redes neurais para inferência de preços de commodities agrícolas; (II) preparação dos dados; (III) criação de uma rede neural LSTM e treinamento de modelos univariado e multivariado; e (IV) avaliação de métricas, geração de resultados e conclusões.
