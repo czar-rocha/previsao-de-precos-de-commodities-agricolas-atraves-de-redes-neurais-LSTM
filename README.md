@@ -123,7 +123,7 @@ Este trabalho propôs uma abordagem de rede neural LSTM univariada e multivariad
 
 Com o avanço no uso de estruturas de deep learning, as redes neurais LSTM tem sido amplamente empregadas em diversas áreas do conhecimento. Pesquisas recentes tem abordado arquiteturas baseadas em redes autoenconders e em métodos hibridos de decomposição, como o Variational Mode Decomposition (VMD).
 
-Este trabalho propôs uma arquitetura de rede LSTM simples, no entanto há espaço para que esta abordagem possa ser testificada em outras arquiteturas de redes neurais. Dessa forma sugere-se como trabalhos futuros a inclusão de outros métodos de inferência aplicados à dinâmica de preços do milho. 
+Este trabalho propôs uma arquitetura de rede LSTM simples, portanto há espaço para que esta abordagem possa ser testificada em outras arquiteturas de redes neurais. Dessa forma sugere-se como trabalhos futuros a inclusão de outros métodos de inferência aplicados à dinâmica de preços do milho. 
 
 ### Referências
 
