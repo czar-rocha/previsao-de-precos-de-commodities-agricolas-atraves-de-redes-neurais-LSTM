@@ -129,3 +129,10 @@ Há espaço para que a abordagem sugerida neste trabalho possa ser testificada d
 ### Referências
 
 
+---
+
+Matrícula: 182.671.010
+
+Pontifícia Universidade Católica do Rio de Janeiro
+
+Curso de Pós Graduação *Business Intelligence Master*
