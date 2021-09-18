@@ -59,9 +59,16 @@ Na preparação dos dados foi realizada ainda a verificação e exclusão de dad
 
 #### ii) Implementação da rede neural
 
-A implementação da rede LSTM foi realizada utilizando a biblioteca Keras, que é um framework prático e intuitivo para construir e treinar modelos de redes neurais. A rede foi configurada com 3 camadas totalmente conectadas. Foram adicionadas também camadas de eliminação (dropout) para evitar o problema de overfitting devido à rede densa, portanto, após cada camada LSTM oculta, foi criada uma camada dropout que garante que a rede neural não dependa inteiramente de um determinado neurônio.
+A implementação da rede LSTM foi realizada utilizando a biblioteca Keras, que é um framework prático e intuitivo para construir e treinar modelos de redes neurais. A rede foi configurada com 3 camadas totalmente conectadas. Foram adicionadas também camadas de eliminação (dropout) após cada camada LSTM oculta, para evitar o problema de overfitting devido à rede densa.
 
 Após definir as camadas da rede, foram especificadas as configurações de aprendizagem. Foi definido o otimizador adam com taxa de aprendizado de 0,01, que é o valor padrão para o otimizador adam, e o erro médio quadrático (MSE, do inglês Mean Squared Error) foi definido como função de perda.
+
+Foram definidos ainda os valores de hiper-parâmetros que foram utilizados para dar início ao processo de treinamento e otimização da rede. Os hiper-parâmetros iniciais foram definidos de forma empírica através de tentativa e erro, com os seguintes valores:
+- Window size: 9
+- Units: 140
+- Dropout: 0.2
+- Epochs: 160
+- Batch size: 16
 
 
 #### iii) Treinamento do modelo LSTM Univariado
@@ -70,19 +77,18 @@ O notebook [modelo_lstm_univariado.ipynb](modelo-lstm-univariado/modelo_lstm_uni
 
 A otimização dos parâmetros foi realizada a partir dos dados de treino e validação. A Tabela 1 mostra os parâmetros utilizados na otimização e os resultados alcançados após todas as iterações.
 
-| Parâmetros | Configuração inicial | Configuração após otimização |
+| Parâmetros/Métricas | Configuração inicial | Configuração após otimização |
 |---|---|---|
 | Window size | 9 | 12 |
 | Units | 140 | 100 |
 | Dropout | 0.2 | 0.2 |
 | Epochs | 120 | 180 |
-| MSE | 0.023 | 0.021 |
 | RMSE | 0.152 | 0.147 |
 | MAPE | 16.65 | 16.33 |
 
 Tabela 1: Resultados da otimização do modelo univariado realizado com os dados de treino e validação
 
-A configuração inicial dos parâmetros foi realizada de forma empírica através de iterações experimentais. Após isso, foi definido também de forma empírica, um range de valores em torno da configuração inicial, sendo estes valores testados iterativamente para identificação dos hiper-parâmetros ótimos, através do menor MSE gerado ao fim do processo.
+A configuração inicial dos parâmetros foi realizada de forma empírica através de iterações experimentais. Após isso, foi definido também de forma empírica, um range de valores em torno da configuração inicial, sendo estes valores testados iterativamente para identificação dos hiper-parâmetros ótimos, através do menor RMSE gerado ao fim do processo.
 
 #### iv) Treinamento do modelo LSTM Multivariado
 
@@ -90,13 +96,12 @@ O notebook [modelo_lstm_multivariado.ipynb](modelo-lstm-multivariado/modelo_lstm
 
 Para ajustar os parâmetros de treinamento e diminuir o erro do modelo, foram realizadas otimizações de hiper-parâmetros através de combinações de diferentes valores. A Tabela 2 mostra os resultados da otimização realizada com os dados de treino e validação.
 
-| Parâmetros | Configuração inicial | Configuração após otimização |
+| Parâmetros/Métricas | Configuração inicial | Configuração após otimização |
 |---|---|---|
 | Window size | 9 | 15 |
 | Units | 140 | 120 |
 | Dropout | 0.2 | 0.2 |
 | Epochs | 120 | 160 |
-| MSE | 0.026 | 0.021 |
 | RMSE | 0.163 | 0.147 |
 | MAPE | 16.78 | 16.35 |
 
@@ -107,11 +112,11 @@ Tabela 2: Resultados da otimização do modelo multivariado realizado com os dad
 O desempenho de previsão dos modelos LSTM foi verificado usando os dados do conjunto de teste. O erro quadrático médio (MSE) foi selecionado como a principal medida para avaliar o desempenho dos modelos.  O MSE dos modelos LSTM univariado e multivariado foi de 0,036 e 0,037, respectivamente. Para fins de verificação das métricas, também foi gerado a raiz do erro médio quadrado (RMSE) e o erro percentual médio absoluto (MAPE) para ambos os modelos.
 
 | Modelo | MSE | RMSE | MAPE |
-|---|---|---|---|
-| LSTM-Univariado | 0.038 | 0.194 | 28.17 |
-| LSTM-Multivariado | 0.038 | 0.195 | 28.04% |
+|---|---|---|
+| LSTM-Univariado | 0.194 | 28.17 |
+| LSTM-Multivariado | 0.195 | 28.04% |
 
-Tabela 3: Performance de previsão dos modelos aplicado aos dados de teste.
+Tabela 3: Performance de previsão dos modelos Univariado e Multivariado aplicado aos dados de teste.
 
 Conforme pode ser visto na Tabela 3, o modelo LSTM univariado teve um desempenho levemente melhor do que o modelo multivariado. Dessa forma, a inclusão de outras variáveis relacionadas a cotação do milho não teve relevância para a performance do modelo. Por outro lado, o modelo multivariado permitiu observar relações entre as variáveis, que se mostraram interessantes.
 
