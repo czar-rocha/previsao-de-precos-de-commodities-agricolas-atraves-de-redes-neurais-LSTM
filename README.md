@@ -1,5 +1,6 @@
 # Previsão de preços do milho através de redes neurais LSTM
-## BI MASTER - ICA - PUC-Rio
+#### Aluno: [Junior Rocha](https://github.com/czar-rocha)
+#### Orientadora: [Manoela Kohler](https://github.com/manoelakohler)
 
 ## Índice
   
