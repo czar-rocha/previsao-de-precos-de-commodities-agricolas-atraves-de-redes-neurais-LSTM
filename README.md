@@ -1,4 +1,4 @@
-# Previsão de preços do commodities agrícolas através de redes neurais LSTM
+# Previsão de preços de commodities agrícolas através de redes neurais LSTM
 #### Aluno: [Junior Rocha](https://github.com/czar-rocha)
 #### Orientadora: [Manoela Kohler](https://github.com/manoelakohler)
 
