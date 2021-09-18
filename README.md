@@ -70,6 +70,7 @@ Foram definidos ainda os valores de hiper-parâmetros que foram utilizados para 
 - Epochs: 160
 - Batch size: 16
 
+As etapas a seguir referentes ao treinamento dos modelos univariado e multivariado realizaram uma otimização dos hiper-parâmetros através da técnica de validação cruzados, onde a combinação de diferentes parâmetros foram testados para identificação da menor função de perda do modelo.
 
 #### iii) Treinamento do modelo LSTM Univariado
 
