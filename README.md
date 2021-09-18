@@ -128,6 +128,19 @@ Há espaço para que a abordagem sugerida neste trabalho possa ser testificada d
 
 ### Referências
 
+CLEMEN , R.; REILLY , T. Making Hard Decisions with Decision Tools. 31, p. 127-129, 2001.
+
+CORSINI, F.; RIBEIRO, C. Dinâmica e previsão de preços de commodities agrícolas com o filtro de Kalman. In: XXVIII ENCONTRO NACIONAL DE ENGENHARIA DE PRODUÇÃO, 2008.
+
+FERREIRA, L.; MOURA, G.; BORENSTEIN, D.; FISCHMANN, A. Utilização de redes neurais artificiais como estratégia de previsão de preços no contexto de agronegócio. RAI – Revista de Administração e Inovação.  2011.
+
+LI, H.; CUI, Y.; WANG, S.; LIU, J. et al. Multivariate Financial Time- Series Prediction with Certified Robustness. IEEE access, 8, p. 1-1, 2020.
+
+OUYANG, H.; WEI, X.; WU, Q. Agricultural commodity futures prices prediction via long- and short- term time series network. Journal of applied economics, 22, n. 1, p. 468-483, 2019.
+
+SAINI, U.; RAJESH, K.; VIPIN, J.; U., K. M. Univariant Time Series forecasting of Agriculture load by using LSTM and GRU RNNs. In: 2020 IEEE Students Conference on Engineering & Systems (SCES), 2020, p. 1-6. DOI: 10.1109/SCES50439.2020.9236695.
+
+XIONG, T.; LI, C.; BAO, Y.; HU, Z. et al. A combination method for interval forecasting of agricultural commodity futures prices. Knowledge-based systems, 77, p. 92-102, 2015.
 
 ---
 
