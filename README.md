@@ -28,7 +28,7 @@ Como objetivos específicos, tem-se os seguintes itens: (I) revisão bibliográf
 
 ### 2. Modelagem
 
-A modelagem deste projeto está organizada em uma metodologia de trabalho composta por cinco etapas: i) preparação e análise dos dados; ii) implementação da rede neural LSTM; iii) treinamento dos modelos Univariado e Multivariado; e iv) avaliação de métricas e geração de resultados.
+A modelagem deste projeto está organizada em uma metodologia de trabalho composta por cinco etapas: i) Preparação e análise dos dados; ii) Implementação da rede neural LSTM; iii) Treinamento do modelo LSTM Univariado; e iv) Treinamento do modelo LSTM Multivariado.
 
 #### i) Preparação e análise dos dados
 
