@@ -22,9 +22,9 @@ Este trabalho apresenta um estudo de aplicação de redes neurais para inferênc
 O objetivo geral deste trabalho é empregar técnicas de redes neurais LSTM para propor uma abordagem de previsão para as cotações do milho, utilizando-se modelos univariados e multivariados com base nos dados divulgados pelo CEPEA.
 Como objetivos específicos, tem-se os seguintes itens: (I) revisão bibliográfica de trabalhos relacionados a aplicação de redes neurais para inferência de preços de commodities agrícolas; (II) preparação dos dados; (III) criação de uma rede neural LSTM e treinamento de modelos univariado e multivariado; e (IV) avaliação de métricas, geração de resultados e conclusões.
 
-<h2 id="metodologia">Metodologia</h2>
+## 1. Modelagem
 
-A metodologia utilizada neste trabalho inclui a realização de cinco etapas: i) preparação e análise dos dados; ii) implementação da rede neural LSTM; iii) treinamento dos modelos Univariado e Multivariado; e iv) avaliação de métricas e geração de resultados.
+A modelagem deste projeto está organizada em uma metodologia de trabalho composta por cinco etapas: i) preparação e análise dos dados; ii) implementação da rede neural LSTM; iii) treinamento dos modelos Univariado e Multivariado; e iv) avaliação de métricas e geração de resultados.
 
 ### I) Preparação e análise dos dados
 
