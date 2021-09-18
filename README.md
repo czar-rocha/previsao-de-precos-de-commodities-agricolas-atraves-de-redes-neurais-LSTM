@@ -108,7 +108,7 @@ Tabela 2: Resultados da otimização do modelo multivariado realizado com os dad
 
 O desempenho de previsão dos modelos LSTM foi verificado usando os dados do conjunto de teste. O erro quadrático médio (MSE) foi selecionado como a principal medida para avaliar o desempenho dos modelos.  O MSE dos modelos LSTM univariado e multivariado foi de 0,036 e 0,037, respectivamente. Para fins de verificação das métricas, também foi gerado a raiz do erro médio quadrado (RMSE) e o erro percentual médio absoluto (MAPE) para ambos os modelos.
 
-| Modelo | MSE | RMSE | MAPE |
+| Modelo | RMSE | MAPE |
 |---|---|---|
 | LSTM-Univariado | 0.194 | 28.17 |
 | LSTM-Multivariado | 0.195 | 28.04% |
