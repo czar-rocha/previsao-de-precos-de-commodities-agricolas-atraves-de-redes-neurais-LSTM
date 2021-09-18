@@ -148,4 +148,4 @@ Matrícula: 182.671.010
 
 Pontifícia Universidade Católica do Rio de Janeiro
 
-Curso de Pós Graduação *Business Intelligence Master*
+Curso de Pós Graduação **Business Intelligence Master**
