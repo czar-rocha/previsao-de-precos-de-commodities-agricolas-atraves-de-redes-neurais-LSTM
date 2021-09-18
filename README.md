@@ -20,8 +20,23 @@ Este trabalho apresenta um estudo de aplicação de redes neurais para inferênc
 
 ### 1. Introdução
 
+#### i) Motivação
 
-#### Objetivos do trabalho
+O mercado de commodities em geral compõem um setor de grande relevância para a economia brasileira. O comércio de commodities do setor agrícola corresponde a uma significativa parcela de valor nas negociações de mercadorias, que nas últimas décadas tem apresentado altas taxas de crescimento e hoje representa uma parcela significativa do PIB brasileiro. Dessa forma, este é um mercado que tem passado por constante evolução e aperfeiçoamento em seus processos de gestão, com o objetivo de se tornar cada vez mais competitivo e eficiente frente a economia global (CORSINI; RIBEIRO, 2008).
+
+De acordo com FERREIRA et al. (2011) nas últimas décadas este setor se inseriu na economia global e se tornou uma cadeia produtiva que busca cada vez mais uma administração estratégica, centrada na eficácia e eficiência, uma vez os meios de negociação de commodities é considerado complexo por apresentar processos estocásticos nas suas formações de preços. Portanto, as estratégias definidas nos processos de planejamento e tomadas de decisão neste setor devem estar em constante aprimoramento. Neste sentido, a previsão de preços no setor agrícola é um tema de grande relevância por fornecer informações que possam reduzir incertezas e riscos e, consequentemente, apoiar tomadas de decisão de mercado (OUYANG; WEI; WU, 2019).
+
+Segundo CLEMEN e REILLY (2001), toda decisão possui quatro pontos de dificuldade: complexidade, incerteza, objetivos múltiplos que se inter-relacionam e possibilidade de diferentes perspectivas levarem a diferentes conclusões de análise. Dessa forma, as decisões baseadas em análises de incertezas estão sempre presentes no dia-dia dos tomadores de decisão.
+
+No Brasil, existem solidas fontes de dados que realizam a divulgação de series históricos de indicadores de preços de commodities agropecuárias, a exemplo do CEPEA - Centro de Estudos Avançados em Economia Aplicada, que desde 1993 elabora a divulgação de indicadores de diversas commodities agropecuárias brasileiras, tais como Boi Gordo, Milho, Etanol, Açúcar, Soja, Algodão, dentre outras.
+
+No entanto, apesar de haver amplas bases de dados históricos, a previsão de qualquer mercado de ativos em geral, como de commodities, acionário, derivativos ou futuros, é geralmente considerada uma das questões mais desafiadoras entre as previsões de séries temporais, devido ao seu ruído e características voláteis. Isso ocorre porque o comportamento dos preços de qualquer ativo pode mudar drasticamente em diferentes períodos, não havendo como mapear todas as variáveis que influenciam diretamente o comportamento de preços de um determinado ativo (XIONG et al., 2015; LI et al., 2020).
+
+Existe na literatura diversos métodos convencionais voltados para previsão de séries temporais, como por exemplo, modelos de médias móveis , lineares, auto regressivo (AR) e auto-regressivo integrado de médias móveis (ARIMA). No entanto, nos últimos anos houve um avanço bastante significativo no desenvolvimento de métodos de machine learning (Support Vector Machine, Randon Forest etc.) e deep learning (como as redes neurais artificiais e suas variantes, RNN, LSTM, GRU, etc.), tornando esses métodos mais atrativos para previsões de séries temporais, devido a sua capacidade de desempenhar bons resultados de previsão.
+
+De acordo com LI et al. (2020) e SAINI et al. (2020), quando comparado às técnicas tradicionais, os modelos de deep learning desempenham funções mais flexíveis e oferecem uma melhor possibilidade de modelar um comportamento temporal altamente complexo e não linear, pois o aprendizado profundo geralmente elimina a necessidade de estacionariedade no pré-processamento de dados.
+
+#### ii) Objetivos do trabalho
 
 O objetivo geral deste trabalho é empregar técnicas de redes neurais LSTM para propor uma abordagem de previsão para as cotações do milho, utilizando-se modelos univariados e multivariados com base nos dados divulgados pelo CEPEA.
 Como objetivos específicos, tem-se os seguintes itens: (I) revisão bibliográfica de trabalhos relacionados a aplicação de redes neurais para inferência de preços de commodities agrícolas; (II) preparação dos dados; (III) criação de uma rede neural LSTM e treinamento de modelos univariado e multivariado; e (IV) avaliação de métricas, geração de resultados e conclusões.
