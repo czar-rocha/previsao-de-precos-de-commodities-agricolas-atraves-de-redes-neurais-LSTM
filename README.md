@@ -131,17 +131,33 @@ Este trabalho propôs uma arquitetura de rede LSTM simples, portanto há espaço
 
 ### Referências
 
+CARRASCO, R.; GABRIEL, A.; ISMAEL, S.; MÁX, C. et al. Forecast of copper price series using vector support machines. In: 2018 7th International Conference on Industrial Technology and Management (ICITM), 2018, p. 380-384. DOI: 10.1109/ICITM.2018.8333979.
+
 CLEMEN , R.; REILLY , T. Making Hard Decisions with Decision Tools. 31, p. 127-129, 2001.
 
 CORSINI, F.; RIBEIRO, C. Dinâmica e previsão de preços de commodities agrícolas com o filtro de Kalman. In: XXVIII ENCONTRO NACIONAL DE ENGENHARIA DE PRODUÇÃO, 2008.
 
 FERREIRA, L.; MOURA, G.; BORENSTEIN, D.; FISCHMANN, A. Utilização de redes neurais artificiais como estratégia de previsão de preços no contexto de agronegócio. RAI – Revista de Administração e Inovação.  2011.
 
+GARGANO, A.; TIMMERMANN, A. Forecasting commodity price indexes using macroeconomic and financial predictors. International journal of forecasting, 30, n. 3, p. 825-843, 2014.
+
+GRAVES, A.; ABDEL-RAHMAN, M.; HINTON, G. Speech Recognition with Deep Recurrent Neural Networks. arXiv.org, 2013.
+
 LI, H.; CUI, Y.; WANG, S.; LIU, J. et al. Multivariate Financial Time- Series Prediction with Certified Robustness. IEEE access, 8, p. 1-1, 2020.
+
+LIU, C.; HU, Z.; LI, Y.; LIU, S. Forecasting copper prices by decision tree learning. Resources policy, 52, p. 427-434, 2017.
+
+MALLIARIS, A. G.; MALLIARIS, M., 2009, Time series and neural networks comparison on gold, oil and the euro. 1961-1967. Disponível em: https://www.scopus.com/inward/record.uri?eid=2-s2.0-70449390002&doi=10.1109%2fIJCNN.2009.5178780&partnerID=40&md5=3e473257422a25c3f0829d5d85b66cdc.
 
 OUYANG, H.; WEI, X.; WU, Q. Agricultural commodity futures prices prediction via long- and short- term time series network. Journal of applied economics, 22, n. 1, p. 468-483, 2019.
 
 SAINI, U.; RAJESH, K.; VIPIN, J.; U., K. M. Univariant Time Series forecasting of Agriculture load by using LSTM and GRU RNNs. In: 2020 IEEE Students Conference on Engineering & Systems (SCES), 2020, p. 1-6. DOI: 10.1109/SCES50439.2020.9236695.
+
+SIVALINGAM, K. C.; MAHENDRAN, S.; NATARAJAN, S. Forecasting gold prices based on extreme learning machine. Int. J. Comput. Control, 11, 2016.
+
+WANG, H.; YANG, Z.; YU, Q.; HONG, T. et al. Online reliability time series prediction via convolutional neural network and long short term memory for service- oriented systems. Knowledge-Based Systems, 159, p. 132, 2018.
+
+WOLLMER, M.; KAISER, M.; EYBEN, F.; SCHULLER, B. et al. LSTM- Modeling of continuous emotions in an audiovisual affect recognition framework. Image and Vision Computing, 31, n. 2, p. 153-163, 2013.
 
 XIONG, T.; LI, C.; BAO, Y.; HU, Z. et al. A combination method for interval forecasting of agricultural commodity futures prices. Knowledge-based systems, 77, p. 92-102, 2015.
 
