@@ -133,6 +133,8 @@ Este trabalho propôs uma arquitetura de rede LSTM simples, portanto há espaço
 
 ### Referências
 
+ALMEIDA, R. Uso de redes neurais long short-term memory como estratégia de algorithmic trading. 2019. (Graduação) - Departamento de Engenharia Elétrica do Centro Tecnológico da Universidade Federal do Espírito Santo, Universidade Federal do Espírito Santo Disponível em: https://ele.ufes.br/sites/engenhariaeletrica.ufes.br/files/field/anexo/projeto_de_graduacao_-_rafael_costa_-_final_-_revisado.pdf.
+
 CARRASCO, R.; GABRIEL, A.; ISMAEL, S.; MÁX, C. et al. Forecast of copper price series using vector support machines. In: 2018 7th International Conference on Industrial Technology and Management (ICITM), 2018, p. 380-384. DOI: 10.1109/ICITM.2018.8333979.
 
 CLEMEN , R.; REILLY , T. Making Hard Decisions with Decision Tools. 31, p. 127-129, 2001.
