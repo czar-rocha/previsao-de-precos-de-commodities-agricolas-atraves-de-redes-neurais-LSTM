@@ -81,12 +81,12 @@ A otimização dos parâmetros foi realizada a partir dos dados de treino e vali
 | Parâmetros/Métricas | Configuração inicial | Configuração após otimização |
 |---|---|---|
 | Window size | 9 | 12 |
-| Units | 140 | 140 |
+| Units | 140 | 100 |
 | Dropout | 0.2 | 0.2 |
-| Epochs | 160 | 180 |
+| Epochs | 160 | 250 |
 | Batch size | 16 | 16 |
-| RMSE | 0.154 | 0.144 |
-| MAPE | 16.50% | 16.71% |
+| RMSE | 0.148 | 0.144 |
+| MAPE | 16.67% | 16.47% |
 
 Tabela 1: Resultados da otimização do modelo univariado realizado com os dados de treino e validação
 
@@ -101,12 +101,12 @@ Para ajustar os parâmetros de treinamento e diminuir o erro do modelo, foram re
 | Parâmetros/Métricas | Configuração inicial | Configuração após otimização |
 |---|---|---|
 | Window size | 9 | 15 |
-| Units | 140 | 180 |
+| Units | 140 | 100 |
 | Dropout | 0.2 | 0.2 |
-| Epochs | 160 | 160 |
+| Epochs | 160 | 140 |
 | Batch size | 16 | 16 |
-| RMSE | 0.151 | 0.147 |
-| MAPE | 17.00% | 16.48% |
+| RMSE | 0.174 | 0.148 |
+| MAPE | 16.82% | 16.33% |
 
 Tabela 2: Resultados da otimização do modelo multivariado realizado com os dados de treino e validação
 
@@ -117,8 +117,8 @@ A Tabela 3 mostra o resultado final obtido através das métricas de desempenho 
 
 | Modelo | RMSE | MAPE |
 |---|---|---|
-| LSTM-Univariado | 0.168 | 28.41 |
-| LSTM-Multivariado | 0.169 | 28.33% |
+| LSTM-Univariado | 0.170 | 28.23% |
+| LSTM-Multivariado | 0.194 | 27.97% |
 
 Tabela 3: Performance de previsão dos modelos Univariado e Multivariado aplicado aos dados de teste.
 
