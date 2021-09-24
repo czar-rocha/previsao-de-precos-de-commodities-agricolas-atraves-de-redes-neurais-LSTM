@@ -130,7 +130,7 @@ Os resultados dos modelos LSTM univariado e multivariado foram avaliados em term
 
 Tabela 3: Performance de previsão dos modelos univariado e multivariado aplicado aos dados de teste.
 
-Conforme pode ser visto na Tabela 3, o modelo LSTM univariado teve um desempenho levemente superior ao modelo multivariado. A inclusão de outras variáveis relacionadas à cotação do milho não mostrou relevância para a performance do modelo. Por outro lado, o modelo multivariado permitiu comparar os resultados entre os dois modelos e observar relações entre as variáveis, que se mostrou interessante.
+Conforme ilustrado na Tabela 3, o modelo univariado teve um desempenho semelhante ao modelo multivariado, mostrando que a inclusão de outras variáveis associadas à dinâmica de preços do milho não mostrou ganho para a performance da rede. Por outro lado, o modelo multivariado permitiu comparar os resultados entre os dois modelos e observar relações entre as variáveis, que se mostrou interessante.
 
 ### 4. Conlusões
 
