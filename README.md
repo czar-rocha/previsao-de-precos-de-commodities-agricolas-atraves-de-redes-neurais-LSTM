@@ -130,13 +130,13 @@ Os resultados dos modelos LSTM univariado e multivariado foram avaliados em term
 
 Tabela 3: Performance de previsão dos modelos univariado e multivariado aplicado aos dados de teste.
 
-Conforme pode ser visto na Tabela 3, o modelo LSTM univariado teve um desempenho levemente superior ao modelo multivariado. A inclusão de outras variáveis relacionadas à cotação do milho não mostrou relevância para a performance do modelo. Por outro lado, o modelo multivariado permitiu observar relações entre as variáveis, que se mostrou interessante.
+Conforme pode ser visto na Tabela 3, o modelo LSTM univariado teve um desempenho levemente superior ao modelo multivariado. A inclusão de outras variáveis relacionadas à cotação do milho não mostrou relevância para a performance do modelo. Por outro lado, o modelo multivariado permitiu comparar os resultados entre os dois modelos e observar relações entre as variáveis, que se mostrou interessante.
 
 ### 4. Conlusões
 
-Este trabalho propôs uma abordagem de rede neural LSTM univariada e multivariada para previsão de preços do milho. Os modelos propostos passaram por ajustes de hiper parâmetros e apresentaram um desempenho satisfatório nos dados de teste. Os modelos univariado e multivariado apresentaram performances semelhantes, dessa forma, observou-se que a inclusão de outras variáveis relacionadas a dinâmica de preçõs do milho não teve relevância na performance do modelo, no entanto a abordagem multivariada agregou conhecimento ao contribuir para a observância das relações entre as variáveis.
+Este trabalho propôs uma abordagem de rede neural LSTM univariada e multivariada para previsão de preços do milho. Os modelos propostos passaram por ajustes de hiper parâmetros e apresentaram um desempenho satisfatório nos dados de teste. Os modelos univariado e multivariado apresentaram performances semelhantes, dessa forma, a inclusão de uma abordagem multivariada não teve relevância na performance do modelo, no entanto a abordagem multivariada agregou conhecimento ao contribuir para verificação das métricas de regressão a partir dos dois modelos treinados. Além disso, a abordagem multivariada contribuiu para a observância das relações entre as variáveis.
 
-Redes neurais LSTM tem sido amplamente empregadas em diversas áreas do conhecimento, pesquisas recentes tem abordado arquiteturas baseadas em combinações de redes LSTM com redes autoenconders. Como trabalhos futuros, propõe-se que a abordagem univariada e multivariada, aplicada neste trabalho, possa ser testificada em novas arquiteturas de redes neurais, sugerindo-se a inclusão de outros métodos de inferência aplicados à dinâmica de preços do milho. 
+Redes neurais LSTM tem sido amplamente empregadas em diversas áreas do conhecimento, pesquisas recentes tem abordado arquiteturas baseadas em combinações de redes LSTM com arquiteturas autoenconders. Como trabalhos futuros, propõe-se que a abordagem univariada e multivariada, aplicada neste trabalho, possa ser testificada em novas arquiteturas de redes neurais, sugerindo-se a inclusão de outras arquiteturas de rede aplicadas à previsão de preços do milho. 
 
 ### Referências
 
