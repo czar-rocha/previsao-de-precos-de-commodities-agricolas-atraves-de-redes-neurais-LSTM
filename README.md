@@ -30,32 +30,38 @@ De acordo com LI et al. (2020) e SAINI et al. (2020), os modelos de deep learnin
 
 Existe na literatura uma diversidade de pesquisas no campo específico da previsão de commodities, seja utilizando métodos clássicos, modelos de aprendizagem de máquina, redes neurais ou até mesmo modelos híbridos ou compostos. Podemos citar alguns trabalhos relacionados, tais como LIU et al. (2017) e CARRASCO et al. (2018), que propuseram modelos de previsão dos preços futuros do cobre a partir de aprendizagem em Random Forest e Suport Vector Machine, respectivamente. Já MALLIARIS e MALLIARIS (2009) empregou uma rede neural artificial para prever os preços do ouro, do petróleo e do euro. No estudo conduzido por SIVALINGAM et a. (2016) foi proposto um modelo de redes neurais para previsão dos preços futuros do ouro a partir dos dados históricos de outras quatro variáveis, composta pelos preços da prata, petróleo bruto, S&P 500 e taxa de câmbio. GARGANO e TIMMERMANN (2014) utilizou modelos de aprendizagem de máquina para previsão do principal índice global de commodities, o Commodity Research Bureau Index (CRB), utilizando em seu modelo um conjunto de variáveis macroeconômicas que poderiam influenciar a dinâmica de precificação do indicador CRB.
 
-Embora as redes neurais tradicionais tenham uma boa capacidade de previsão, a sua capacidade preditiva em séries temporais ainda é desafiadora devido a dinâmica volátil e não lineares. Na tentativa de superar esses desafios, as redes neurais do tipo Long-short Term Memory (LSTM) vem apresentando resultados promissores para o processamento de dados de sequência, como séries temporais.
+Embora as redes neurais tradicionais tenham uma boa capacidade de previsão, a sua capacidade preditiva em séries temporais ainda é desafiadora devido a dinâmica volátil e não lineares característica de series temporais de mercados de commodities em geral. Na tentativa de superar esses desafios, as redes neurais do tipo Long-short Term Memory (LSTM) vem apresentando resultados promissores para o processamento de dados de sequência, como as séries temporais.
 
 As redes LSTM são um tipo de RNN com modificações na estrutura de controle de suas camadas. Em uma rede LSTM as estruturas de controle trabalham de forma cooperativa com o objetivo de controlar o fluxo de informação, operando como uma memória e definindo o que a rede deve guardar, e o que deve esquecer ao longo do tempo. Especificamente, Uma célula LSTM contém três tipos de portões de controle: (i) Forget Gate, portão para decidir qual informação não é relevante e deve ser esquecida; (ii) Input Gate, portão para definir quais entradas serão utilizadas para atualizar as células de memória; e (iii) Output Gate, portão que decide quais serão as saídas da célula, levando em conta qual a entrada e qual o estado da célula de memória (ALMEIDA, 2019).
 
 Com o avanço no uso de estruturas de deep learning, as redes neurais LSTM tem sido amplamente empregadas em diversas áreas do conhecimento, tais como no processamento de linguagem natural (GRAVES et al., 2013), previsão de séries temporais (WANG et al., 2018) e análise de emoções (WOLLMER et al., 2013). Dessa forma, as pesquisas em torno de redes LSTM mostram a capacidade de aprender as dependências entre séries de dados complexas e não lineares.
 
+Observa-se ainda na literatura o surgimento de novas arquiteturas de redes neurais. Dentre elas, as redes autoencoders são uma das arquiteturas que vem ganhando destaque. Redes autoencoders são formadas por um encoder e um decoder cujo objetivo é treinar uma rede capaz de selecionar determinadas características dos dados de entrada, de tal forma que se crie uma representação de um espaço latente de menor dimensão que os dados originais. Uma rede autoencoder treinada pode ser utilizada como entrada para um outro modelo preditor. Dessa forma, a rede autoencoder pode ser utilizada como forma de pré-processamento dos dados de entrada, selecionando as características mais relevantes para o problema, e que posteriormente pode alimentar uma outra rede preditora a partir do espaço latente de um autoencoder (ALMEIDA, 2019).
+
+Dentre os trabalhos existentes, LI et al. (2020) propõe uma arquitetura formada por uma rede autoencoder e uma rede do tipo Gated Recurrent Unit (GRU)  para gerar previsões de preços de commodities agrícolas. Neste trabalho, a rede autoencoder é utilizada para criar representações compactadas das séries temporais multivariadas, utilizadas como input do modelo.
+
+
 #### ii) Objetivos do trabalho
 
-O objetivo geral deste trabalho é empregar técnicas de redes neurais LSTM para propor uma abordagem de previsão para as cotações do milho, utilizando-se modelos univariado e multivariado com base nos dados divulgados pelo CEPEA.
-Como objetivos específicos, tem-se os seguintes itens: (I) revisão bibliográfica de trabalhos relacionados a aplicação de redes neurais para inferência de preços de commodities agrícolas; (II) preparação dos dados; (III) criação de uma rede neural LSTM e treinamento de modelos univariado e multivariado; e (IV) avaliação de métricas, geração de resultados e conclusões.
+O objetivo geral deste trabalho é propor uma abordagem de previsão de preços do milho, utilizando-se modelos univariado e multivariado com base nos dados de cotações de commodities divulgados pelo CEPEA.
+Como objetivos específicos, tem-se os seguintes itens: (I) revisão bibliográfica de trabalhos relacionados a aplicação de redes neurais para inferência de séries temporais; (II) criação de uma rede neural LSTM para previsão de preços do milho; (III) treinamento de modelos univariado e multivariado; e (IV) avaliação de métricas, geração de resultados e conclusões.
 
 ### 2. Modelagem
 
-A modelagem deste projeto está organizada em uma metodologia de trabalho composta por cinco etapas: i) Preparação e análise dos dados; ii) Implementação da rede neural LSTM; iii) Treinamento do modelo LSTM Univariado; e iv) Treinamento do modelo LSTM Multivariado.
+A modelagem deste projeto está organizada em uma metodologia de trabalho composta por quatro etapas: i) Preparação e análise dos dados; ii) Implementação da rede neural LSTM; iii) Treinamento do modelo LSTM Univariado; e iv) Treinamento do modelo LSTM Multivariado.
 
 #### i) Preparação e análise dos dados
 
-Para a aplicação do modelo proposto, foram selecionadas três commodities ligadas ao setor agropecuário brasileiro: milho, soja e boi. Os dados consistem nas series históricas dos indicadores diários de preços fornecidos pela Escola Superior de Agricultura Luiz de Queiroz (Esalq), por meio do banco de dados do Centro de Estudos Avançados em Economia Aplicada [(CEPEA)](https://www.cepea.esalq.usp.br/br/consultas-ao-banco-de-dados-do-site.aspx).
+Foram selecionadas três commodities ligadas ao setor agropecuário brasileiro: milho, soja e boi. Os dados consistem nas series históricas dos indicadores diários de preços fornecidos pela Escola Superior de Agricultura Luiz de Queiroz (Esalq), por meio do banco de dados do Centro de Estudos Avançados em Economia Aplicada [(CEPEA)](https://www.cepea.esalq.usp.br/br/consultas-ao-banco-de-dados-do-site.aspx). O período considerado no estudo foi de 02/01/2008 à 16/07/2021. 
 
 Também foi incluído no estudo os dados de um indicador global de commodities, o Commodity Research Bureau Index (CRB), que é um índice que atua como um indicador representativo dos mercados globais de commodities. Este índice é calculado como uma média dos preços de commodities individuais, formado por 19 commodities, classificadas em 4 grupos, com diferentes pesos: Energia: 39%, Agricultura: 41%, Metais preciosos: 7%, Metais básicos e industriais: 13% [(https://tradingeconomics.com/commodity/crb)](https://tradingeconomics.com/commodity/crb). O CRB busca medir a direção do preço agregado de vários setores de commodities e é utilizado para projetar movimentos direcionais dos preços de comercialização de commodities globais [(https://www.investopedia.com/terms/c/crb.asp)](https://www.investopedia.com/terms/c/crb.asp). A série histórica do CRB foi adquirida a partir do site [Br Investing.com](https://br.investing.com/indices/thomson-reuters---jefferies-crb).
 
 Os datasets utilizados neste trabalho estão disponíveis em formato csv no diretório [dados](dados).
 
-O CEPEA fornece os preços das commodities cotados em real (brl) e dólar (usd). Dado que as commodities brasileiras tem forte influência do dólar, por estarem inseridas no mercado global, e dado que o CRB é um indicador também referenciado em dólar, constatou-se uma maior correlação entre as cotações das commodities cotadas em dólar e o CRB. O notebook modelo-lstm-multivariado.ipynb ilustra uma análise das correlações entre as séries estudadas.
+O CEPEA fornece os preços das commodities cotados em real (brl) e dólar (usd). Dado que as commodities brasileiras tem forte influência do dólar, por estarem inseridas no mercado global, e sendo que o CRB é um indicador também referenciado em dólar, constatou-se uma maior correlação do CRB com as cotações do milho, soja e boi cotados em dólar.
 Dessa forma, por haver maior correlação entre as variáveis, foram consideradas somente as cotações em dólar para as abordagens de previsão univarida e multivariada.
-Na preparação dos dados foi realizada ainda a verificação e exclusão de dados nulos, bem como a normalização dos dados para valores entre 0 e 1, facilitando assim algumas análises sobre as variáveis.
+
+Na preparação dos dados foi realizada ainda a verificação e exclusão de dados nulos, bem como a normalização dos dados para valores entre 0 e 1, facilitando assim algumas análises sobre as variáveis. O notebook modelo-lstm-multivariado.ipynb ilustra a preparação e análise dos dados.
 
 #### ii) Implementação da rede neural
 
@@ -63,18 +69,18 @@ A implementação da rede LSTM foi realizada utilizando a biblioteca Keras, que 
 
 Após definir as camadas da rede, foram especificadas as configurações de aprendizagem. Foi definido o otimizador adam com taxa de aprendizado de 0,01, que é o valor padrão para o otimizador adam, e o erro médio quadrático (MSE, do inglês Mean Squared Error) foi definido como função de perda.
 
-Foram definidos ainda os valores de hiper-parâmetros que foram utilizados para dar início ao processo de treinamento e otimização da rede. Os hiper-parâmetros iniciais foram definidos de forma empírica através de tentativa e erro, com os seguintes valores:
+Foram definidos os valores de hiper-parâmetros que foram utilizados para dar início ao processo de treinamento e otimização da rede. Os hiper-parâmetros iniciais foram definidos de forma empírica através de tentativa e erro, com os seguintes valores:
 - Window size: 9
 - Units: 140
 - Dropout: 0.2
 - Epochs: 160
 - Batch size: 16
 
-As etapas a seguir tratam do treinamento dos modelos univariado e multivariado, onde foram realizadas otimizações dos hiper-parâmetros através da técnica de validação cruzados. Combinações de diferentes parâmetros foram testados para identificação da menor função de perda do modelo.
+As etapas a seguir tratam do treinamento dos modelos univariado e multivariado, onde foram realizadas otimizações dos hiper-parâmetros através de técnica de validação cruzados, onde combinações de diferentes parâmetros foram testados para identificação dos parâmetros com menor perda para o modelo.
 
 #### iii) Treinamento do modelo LSTM Univariado
 
-O notebook [modelo_lstm_univariado.ipynb](modelo-lstm-univariado/modelo_lstm_univariado.ipynb) mostra o desenvolvimento e teste do modelo univariado. Este modelo foi treinado utilizando apenas a feature de cotação do milho. A série temporal foi dividida em 60-20-20 subconjuntos, onde 60% dos dados foram utilizados para treinamento, 20% para validação  e otimização de parâmetros, e os 20% restantes foram usados para teste.
+O notebook [modelo_lstm_univariado.ipynb](modelo-lstm-univariado/modelo_lstm_univariado.ipynb) mostra o desenvolvimento e teste do modelo univariado. Este modelo foi treinado utilizando como input apenas a feature de cotação do milho. A série temporal foi dividida em 60-20-20 subconjuntos, onde 60% dos dados foram utilizados para treinamento, 20% para validação  e otimização de parâmetros, e os 20% restantes foram usados para teste.
 
 A otimização dos parâmetros foi realizada a partir dos dados de treino e validação. A Tabela 1 mostra os parâmetros utilizados na otimização e os resultados alcançados após todas as iterações.
 
