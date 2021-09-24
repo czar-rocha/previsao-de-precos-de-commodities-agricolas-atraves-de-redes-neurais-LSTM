@@ -44,7 +44,7 @@ LI et al. (2020) propõe uma arquitetura formada por uma rede autoencoder e uma 
 #### ii) Objetivos do trabalho
 
 O objetivo geral deste trabalho é propor uma abordagem de previsão de preços do milho, utilizando-se modelos univariado e multivariado com base nos dados de cotações de commodities divulgados pelo CEPEA.
-Como objetivos específicos, tem-se os seguintes itens: 1) revisão bibliográfica de trabalhos relacionados a aplicação de redes neurais para inferência de séries temporais; 2) criação de uma rede neural LSTM para previsão de preços do milho; 3) treinamento de modelos univariado e multivariado; e 4) avaliação de métricas, geração de resultados e conclusões.
+Como objetivos específicos, tem-se os seguintes itens: 1) revisão bibliográfica de trabalhos relacionados a aplicação de redes neurais para inferência de séries temporais; 2) criação de uma rede neural LSTM para previsão de preços do milho; 3) treinamento de um modelo univariado e multivariado; e 4) geração de métricas, resultados e conclusões.
 
 ### 2. Modelagem
 
@@ -82,7 +82,9 @@ As etapas a seguir tratam do treinamento dos modelos univariado e multivariado, 
 
 O notebook [modelo_lstm_univariado.ipynb](modelo-lstm-univariado/modelo_lstm_univariado.ipynb) mostra o desenvolvimento e teste do modelo univariado. Este modelo foi treinado utilizando como input apenas a feature de cotação do milho. A série temporal foi dividida em 60-20-20 subconjuntos, onde 60% dos dados foram utilizados para treinamento, 20% para validação  e otimização de parâmetros, e os 20% restantes foram usados para teste.
 
-A otimização dos parâmetros foi realizada a partir dos dados de treino e validação. A Tabela 1 mostra os parâmetros utilizados na otimização e os resultados alcançados após todas as iterações.
+A otimização de parâmetros foi uma tarefa bastante custosa, devido à dimensão da série de dados e pelo de que fato de que a rede deve ser treinada inúmeras vezes iterativamente. Dessa forma, foi delimitado um conjunto de iterações experimentais para identificação dos hiper-parâmetros de melhor resultado a partir do menor RMSE gerado ao fim do processo. 
+
+A otimização foi realizada a partir dos dados de treino e validação. A Tabela 1 mostra os parâmetros utilizados na otimização e os resultados alcançados após todas as iterações.
 
 | Parâmetros/Métricas | Configuração inicial | Configuração após otimização |
 |---|---|---|
@@ -96,7 +98,6 @@ A otimização dos parâmetros foi realizada a partir dos dados de treino e vali
 
 Tabela 1: Resultados da otimização do modelo univariado realizado com os dados de treino e validação
 
-A configuração inicial dos parâmetros foi realizada de forma empírica através de iterações experimentais. Após isso, foi definido também de forma empírica, um range de valores em torno da configuração inicial, sendo estes valores testados iterativamente para identificação dos hiper-parâmetros ótimos a partir do menor RMSE gerado ao fim do processo.
 
 #### iv) Treinamento do modelo LSTM Multivariado
 
