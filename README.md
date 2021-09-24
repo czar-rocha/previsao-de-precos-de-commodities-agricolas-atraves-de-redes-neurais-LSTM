@@ -158,7 +158,7 @@ LI, H.; CUI, Y.; WANG, S.; LIU, J. et al. Multivariate Financial Time- Series Pr
 
 LIU, C.; HU, Z.; LI, Y.; LIU, S. Forecasting copper prices by decision tree learning. Resources policy, 52, p. 427-434, 2017.
 
-MALLIARIS, A. G.; MALLIARIS, M., 2009, Time series and neural networks comparison on gold, oil and the euro. 1961-1967. Disponível em: https://www.scopus.com/inward/record.uri?eid=2-s2.0-70449390002&doi=10.1109%2fIJCNN.2009.5178780&partnerID=40&md5=3e473257422a25c3f0829d5d85b66cdc.
+MALLIARIS, A. G.; MALLIARIS, M., 2009, Time series and neural networks comparison on gold, oil and the euro. Proceedings of the International Joint Conference on Neural Networks, p. 1961-1967.
 
 OUYANG, H.; WEI, X.; WU, Q. Agricultural commodity futures prices prediction via long- and short- term time series network. Journal of applied economics, 22, n. 1, p. 468-483, 2019.
 
