@@ -80,7 +80,7 @@ As etapas a seguir tratam do treinamento dos modelos univariado e multivariado, 
 
 #### iii) Treinamento do modelo LSTM Univariado
 
-O notebook [modelo_lstm_univariado.ipynb](modelo-lstm-univariado/modelo_lstm_univariado.ipynb) mostra o desenvolvimento e teste do modelo univariado. Este modelo foi treinado utilizando como input apenas a feature de cotação do milho. A série temporal foi dividida em 60-20-20 subconjuntos, onde 60% dos dados foram utilizados para treinamento, 20% para validação  e otimização de parâmetros, e os 20% restantes foram usados para teste.
+O notebook [modelo_lstm_univariado.ipynb](modelo-lstm-univariado/modelo_lstm_univariado.ipynb) mostra o desenvolvimento e teste do modelo univariado. Este modelo foi treinado utilizando como input apenas a feature de cotação do milho, sendo o output do modelo a própria cotação do milho. A série temporal foi dividida em 60-20-20 subconjuntos, onde 60% dos dados foram utilizados para treinamento, 20% para validação  e otimização de parâmetros, e os 20% restantes foram usados para teste.
 
 A otimização de parâmetros foi uma tarefa bastante custosa, devido à dimensão da série de dados e pelo de que fato de que a rede deve ser treinada inúmeras vezes iterativamente. Dessa forma, foi delimitado um conjunto de iterações experimentais para identificação dos hiper-parâmetros de melhor resultado a partir do menor RMSE gerado ao fim do processo. 
 
@@ -101,7 +101,7 @@ Tabela 1: Resultados da otimização do modelo univariado realizado com os dados
 
 #### iv) Treinamento do modelo LSTM Multivariado
 
-O notebook [modelo_lstm_multivariado.ipynb](modelo-lstm-multivariado/modelo_lstm_multivariado.ipynb) mostra o desenvolvimento e teste do modelo multivariado. O modelo multivariado foi treinado a partir das features do milho, soja, boi e do CRB. Para o treinamento, os dados foram divididos em 60-20-20 subconjuntos, onde 60% dos dados foram usados para treinamento, 20% para validação e otimização de parâmetros, e os 20% restantes foram usados para teste.
+O notebook [modelo_lstm_multivariado.ipynb](modelo-lstm-multivariado/modelo_lstm_multivariado.ipynb) mostra o desenvolvimento e teste do modelo multivariado. O modelo multivariado foi treinado a partir das features de cotação do milho, soja, boi e do CRB. Sendo que a cotação do milho foi definida como output do modelo.  Para o treinamento, os dados foram divididos em 60-20-20 subconjuntos, onde 60% dos dados foram usados para treinamento, 20% para validação e otimização de parâmetros, e os 20% restantes foram usados para teste.
 
 Para ajustar os parâmetros de treinamento e diminuir o erro do modelo, foram realizadas otimizações de hiper-parâmetros através de combinações de diferentes valores. A Tabela 2 mostra os resultados alcançados na otimização.
 
@@ -119,8 +119,7 @@ Tabela 2: Resultados da otimização do modelo multivariado realizado com os dad
 
 ### 3. Resultados
 
-O desempenho de previsão dos modelos LSTM foi verificado usando os dados do conjunto de teste. O  Root Mean Square Error (RMSE) foi selecionado como a principal medida para avaliar o desempenho dos modelos. Para fins de verificação, também foi gerado o erro percentual médio absoluto (MAPE) para ambos os modelos.
-A Tabela 3 mostra o resultado final obtido através das métricas de desempenho de cada modelo.
+O desempenho de previsão dos modelos LSTM univariado e multivariado foi mensurado utilizando os dados do conjunto de teste. O Root Mean Square Error (RMSE) e o Mean Absolute Percentage Error (MAPE) foram selecionados como as principais métricas para avaliar o desempenho dos modelos. A Tabela 3 mostra o resultado final obtido através das métricas de cada modelo.
 
 | Modelo | RMSE | MAPE |
 |---|---|---|
@@ -129,15 +128,13 @@ A Tabela 3 mostra o resultado final obtido através das métricas de desempenho 
 
 Tabela 3: Performance de previsão dos modelos Univariado e Multivariado aplicado aos dados de teste.
 
-Conforme pode ser visto na Tabela 3, o modelo LSTM univariado teve um desempenho levemente melhor do que o modelo multivariado. Dessa forma, a inclusão de outras variáveis relacionadas a cotação do milho não teve relevância para a performance do modelo. Por outro lado, o modelo multivariado permitiu observar relações entre as variáveis, que se mostrou interessante.
+Conforme pode ser visto na Tabela 3, o modelo LSTM univariado teve um desempenho levemente superior ao modelo multivariado. A inclusão de outras variáveis relacionadas à cotação do milho não mostrou relevância para a performance do modelo. Por outro lado, o modelo multivariado permitiu observar relações entre as variáveis, que se mostrou interessante.
 
 ### 4. Conlusões
 
-Este trabalho propôs uma abordagem de rede neural LSTM univariada e multivariada para previsão de preços do milho. Os modelos propostos passaram por ajustes de hiper parâmetros e apresentaram um desempenho satisfatório nos dados de teste. Os modelos univariado e multivariado apresentaram performances semelhantes, dessa forma, a inclusão de outras variáveis ao estudo não teve relevância na performance do modelo para a previsão das cotações do milho, no entanto a abordagem multivariada agregou conhecimento ao permitir a observância das relações entre as variáveis.
+Este trabalho propôs uma abordagem de rede neural LSTM univariada e multivariada para previsão de preços do milho. Os modelos propostos passaram por ajustes de hiper parâmetros e apresentaram um desempenho satisfatório nos dados de teste. Os modelos univariado e multivariado apresentaram performances semelhantes, dessa forma, observou-se que a inclusão de outras variáveis ao estudo de previsão do milho não teve relevância na performance do modelo, no entanto a abordagem multivariada agregou conhecimento ao permitir a observância das relações entre as variáveis.
 
-Com o avanço no uso de estruturas de deep learning, as redes neurais LSTM tem sido amplamente empregadas em diversas áreas do conhecimento. Pesquisas recentes tem abordado arquiteturas baseadas em redes autoenconders e em métodos hibridos de decomposição, como o Variational Mode Decomposition (VMD).
-
-Este trabalho propôs uma arquitetura de rede LSTM simples, portanto há espaço para que esta abordagem possa ser testificada em outras arquiteturas de redes neurais, sugerindo-se como trabalhos futuros a inclusão de outros métodos de inferência aplicados à dinâmica de preços do milho. 
+Com o avanço no uso de estruturas de deep learning, as redes neurais LSTM tem sido amplamente empregadas em diversas áreas do conhecimento. Pesquisas recentes tem abordado arquiteturas baseadas em combinações de redes LSTM com redes autoenconders. Como trabalhos futuros, propõe-se que a abordagem univariada e multivariada aplicada neste trabalho seja testificada em novas arquiteturas de redes neurais, sugerindo-se a inclusão de outros métodos de inferência aplicados à dinâmica de preços do milho. 
 
 ### Referências
 
