@@ -8,7 +8,7 @@ Trabalho apresentado ao curso [BI MASTER](https://ica.puc-rio.ai/bi-master) como
 
 ### Resumo
 
-Este trabalho apresenta um estudo de aplicação de redes neurais para inferência de preços do milho, uma das principais commodities brasileiras. O setor de commodities agrícolas tem grande relevância na economia brasileira, pois está inserido no comércio global de mercadorias e possui uma parcela significativa de valor nas suas negociações. Na literatura, há diversas pesquisas no campo específico da previsão de commodities, seja utilizando métodos clássicos, modelos de aprendizagem de máquina ou redes neurais. Métodos clássicos, por serem técnicas generalizadas, estão mais suscetíveis a falhas ao tentar se adaptar às características voláteis e não estacionárias do mercado de commodities. Já as redes neurais profundas tem se mostrado uma alternativa eficiente para a previsão de comportamentos voláteis de forma adaptável e dinâmica. O método proposto neste trabalho consiste em utilizar redes neurais recorrentes do tipo Long Short-Term Memory (LSTM) para implementação de modelos univariado e multivariado para previsão de preços do milho. A partir de dados do CEPEA (Centro de Estudos Avançados em Economia Aplicada), foram obtidas as series históricas de três commodities do setor agropecuário brasileiro: milho, soja e boi gordo. Também foi incluído no estudo os dados de um indicador global de commodities, o Commodity Research Bureau Index (CRB). No processo de treinamento da rede buscou-se minimizar a função de perda através da otimização dos hiper-parâmetros. Os resultados de previsão sobre as cotações do milho mostraram uma boa performance nos dados de teste.
+Este trabalho apresenta um modelo de previsão de preços do milho através de redes neurais recorrentes do tipo Long Short-Term Memory (LSTM). O milho é considerado uma das principais commodities agrícolas brasileiras. Trata-se de um setor de grande relevância para a economia do país e está inserido no comércio global de mercadorias. Na literatura, há diversas pesquisas no campo específico da previsão de commodities, incluindo métodos clássicos, aprendizagem de máquina e redes neurais profundas. Métodos clássicos, por serem técnicas generalizadas, estão mais suscetíveis a falhas ao tentar se adaptar às características voláteis e não estacionárias do mercado de commodities. Já as redes neurais profundas tem se mostrado uma alternativa eficiente para a previsão de comportamentos voláteis, de forma adaptável e dinâmica. O método proposto neste trabalho consiste em aplicar redes neurais LSTM com análise univariada e multivariada para previsão de preços do milho. A partir de dados do Centro de Estudos Avançados em Economia Aplicada (CEPEA), foram obtidas as séries históricas de três commodities do setor agropecuário brasileiro: milho, soja e boi gordo. Também foi incluído no estudo os dados de um indicador global de commodities, o Commodity Research Bureau Index (CRB). Buscou-se minimizar o erro de validação através de métricas de regressão com otimização de hiper-parâmetros. Os resultados mostraram boa performance sobre os dados de teste.
 
 ### 1. Introdução
 
@@ -119,14 +119,14 @@ Tabela 2: Resultados da otimização do modelo multivariado realizado com os dad
 
 ### 3. Resultados
 
-O desempenho de previsão dos modelos LSTM univariado e multivariado foi mensurado utilizando os dados do conjunto de teste. O Root Mean Square Error (RMSE) e o Mean Absolute Percentage Error (MAPE) foram selecionados como as principais métricas para avaliar o desempenho dos modelos. A Tabela 3 mostra o resultado final obtido através das métricas de cada modelo.
+Os resultados dos modelos LSTM univariado e multivariado foram avaliados em termos de erro de validação através de métricas de regressão. O Root Mean Square Error (RMSE) e o Mean Absolute Percentage Error (MAPE) foram selecionados como as principais métricas para avaliar o desempenho dos modelos sobre os dados de teste. A Tabela 3 mostra o resultado final obtido através de cada modelo.
 
 | Modelo | RMSE | MAPE |
 |---|---|---|
 | LSTM-Univariado | 0.170 | 28.23% |
 | LSTM-Multivariado | 0.194 | 27.97% |
 
-Tabela 3: Performance de previsão dos modelos Univariado e Multivariado aplicado aos dados de teste.
+Tabela 3: Performance de previsão dos modelos univariado e multivariado aplicado aos dados de teste.
 
 Conforme pode ser visto na Tabela 3, o modelo LSTM univariado teve um desempenho levemente superior ao modelo multivariado. A inclusão de outras variáveis relacionadas à cotação do milho não mostrou relevância para a performance do modelo. Por outro lado, o modelo multivariado permitiu observar relações entre as variáveis, que se mostrou interessante.
 
