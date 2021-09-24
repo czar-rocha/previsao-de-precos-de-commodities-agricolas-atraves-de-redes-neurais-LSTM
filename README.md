@@ -47,7 +47,7 @@ LI et al. (2020) propõe uma arquitetura formada por uma rede autoencoder e uma 
 #### ii) Objetivos do trabalho
 
 O objetivo geral deste trabalho é propor uma abordagem de previsão de preços do milho, utilizando-se modelos univariado e multivariado com base nos dados de cotações de commodities divulgados pelo CEPEA.
-Como objetivos específicos, tem-se os seguintes itens: 1) revisão bibliográfica de trabalhos relacionados a aplicação de redes neurais para inferência de séries temporais; 2) criação de uma rede neural LSTM para previsão de preços do milho; 3) treinamento de um modelo univariado e multivariado; e 4) geração de métricas, resultados e conclusões.
+Como objetivos específicos, tem-se os seguintes itens: 1) revisão bibliográfica de trabalhos relacionados a aplicação de redes neurais para inferência de séries temporais; 2) criação de uma rede neural LSTM; 3) treinamento de um modelo univariado e multivariado; e 4) geração de métricas, resultados e conclusões.
 
 ### 2. Modelagem
 
@@ -61,10 +61,9 @@ Também foi incluído no estudo os dados de um indicador global de commodities, 
 
 Os datasets utilizados neste trabalho estão disponíveis em formato csv no diretório [dados](dados).
 
-O CEPEA fornece os preços das commodities cotados em real (brl) e dólar (usd). Dado que as commodities brasileiras tem forte influência do dólar, por estarem inseridas no mercado global, e sendo que o CRB é um indicador também referenciado em dólar, constatou-se uma maior correlação do CRB com as cotações do milho, soja e boi cotados em dólar.
-Dessa forma, por haver maior correlação entre as variáveis, foram consideradas somente as cotações em dólar para as abordagens de previsão univarida e multivariada.
+O CEPEA fornece os preços das commodities cotados em real (brl) e dólar (usd). Como as commodities brasileiras tem forte influência do dólar, por estarem inseridas no mercado global, observou-se uma maior correlação das cotações em dolar com o indicador CRB, que é referenciado em dólar. Dessa forma, por haver maior correlação entre as variáveis de commodities e o CRB, foram consideradas somente as cotações em dólar para as abordagens de previsão univarida e multivariada.
 
-Na preparação dos dados foi realizada ainda a verificação e exclusão de dados nulos, bem como a normalização dos dados para valores entre 0 e 1, facilitando assim algumas análises sobre as variáveis. O notebook modelo-lstm-multivariado.ipynb ilustra a preparação e análise dos dados.
+Na preparação dos dados foi realizada ainda a verificação e exclusão de dados nulos, bem como a normalização dos dados para valores entre 0 e 1, facilitando as análises sobre as variáveis e o treinamento da rede. O notebook modelo-lstm-multivariado.ipynb ilustra a preparação e análise dos dados.
 
 #### ii) Implementação da rede neural
 
