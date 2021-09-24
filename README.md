@@ -84,7 +84,7 @@ As etapas a seguir tratam do treinamento dos modelos univariado e multivariado, 
 
 O notebook [modelo_lstm_univariado.ipynb](modelo-lstm-univariado/modelo_lstm_univariado.ipynb) mostra o desenvolvimento e teste do modelo univariado. Este modelo foi treinado utilizando como input apenas a feature de cotação do milho, sendo o output do modelo a própria cotação do milho. A série temporal foi dividida em 60-20-20 subconjuntos, onde 60% dos dados foram utilizados para treinamento, 20% para validação  e otimização de parâmetros, e os 20% restantes foram usados para teste.
 
-A otimização de parâmetros foi uma tarefa bastante custosa, devido à dimensão da série de dados e pelo de que fato de que a rede deve ser treinada inúmeras vezes iterativamente. Dessa forma, foi delimitado um conjunto de iterações experimentais para identificação dos hiper-parâmetros de melhor resultado a partir do menor RMSE gerado ao fim do processo. 
+A otimização de parâmetros foi uma tarefa bastante custosa, devido à dimensão da série de dados e pelo fato de que durante a otimização a rede deve ser treinada inúmeras vezes iterativamente. Dessa forma, foi delimitado um conjunto de iterações experimentais para identificação dos hiper-parâmetros de melhor resultado a partir do menor RMSE gerado ao fim do processo. 
 
 A otimização foi realizada a partir dos dados de treino e validação. A Tabela 1 mostra os parâmetros utilizados na otimização e os resultados alcançados após todas as iterações.
 
