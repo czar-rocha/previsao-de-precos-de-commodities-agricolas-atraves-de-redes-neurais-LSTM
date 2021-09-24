@@ -63,7 +63,7 @@ Os datasets utilizados neste trabalho estão disponíveis em formato csv no dire
 
 O CEPEA fornece os preços das commodities cotados em real (brl) e dólar (usd). Como as commodities brasileiras tem forte influência do dólar, por estarem inseridas no mercado global, observou-se uma maior correlação das cotações em dolar com o indicador CRB, que é referenciado em dólar. Dessa forma, por haver maior correlação entre as variáveis de commodities e o CRB, foram consideradas somente as cotações em dólar para as abordagens de previsão univarida e multivariada.
 
-Na preparação dos dados foi realizada ainda a verificação e exclusão de dados nulos, bem como a normalização dos dados para valores entre 0 e 1, facilitando as análises sobre as variáveis e o treinamento da rede. O notebook modelo-lstm-multivariado.ipynb ilustra a preparação e análise dos dados.
+Na preparação dos dados foi realizada ainda a verificação e exclusão de dados nulos, bem como a normalização dos dados para valores entre 0 e 1, facilitando as análises sobre as variáveis e o treinamento da rede. O notebook [modelo_lstm_multivariado.ipynb](modelo-lstm-multivariado/modelo_lstm_multivariado.ipynb) ilustra a preparação e análise dos dados.
 
 #### ii) Implementação da rede neural
 
@@ -71,7 +71,7 @@ A implementação da rede LSTM foi realizada utilizando a biblioteca Keras, que 
 
 Após definir as camadas da rede, foram especificadas as configurações de aprendizagem. Foi definido o otimizador adam com taxa de aprendizado de 0,01, que é o valor padrão para o otimizador adam, e o erro médio quadrático (MSE, do inglês Mean Squared Error) foi definido como função de perda.
 
-Foram definidos os valores de hiper-parâmetros que foram utilizados para dar início ao processo de treinamento e otimização da rede. Os hiper-parâmetros iniciais foram definidos de forma empírica através de tentativa e erro, com os seguintes valores:
+Foram definidos valores iniciais de hiper-parâmetros para dar início ao processo de treinamento e otimização da rede. Os hiper-parâmetros iniciais foram definidos de forma empírica através de tentativa e erro, com os seguintes valores:
 - Window size: 9
 - Units: 140
 - Dropout: 0.2
