@@ -132,7 +132,7 @@ Conforme pode ser visto na Tabela 3, o modelo LSTM univariado teve um desempenho
 
 ### 4. Conlusões
 
-Este trabalho propôs uma abordagem de rede neural LSTM univariada e multivariada para previsão de preços do milho. Os modelos propostos passaram por ajustes de hiper parâmetros e apresentaram um desempenho satisfatório nos dados de teste. Os modelos univariado e multivariado apresentaram performances semelhantes, dessa forma, observou-se que a inclusão de outras variáveis ao estudo de previsão do milho não teve relevância na performance do modelo, no entanto a abordagem multivariada agregou conhecimento ao permitir a observância das relações entre as variáveis.
+Este trabalho propôs uma abordagem de rede neural LSTM univariada e multivariada para previsão de preços do milho. Os modelos propostos passaram por ajustes de hiper parâmetros e apresentaram um desempenho satisfatório nos dados de teste. Os modelos univariado e multivariado apresentaram performances semelhantes, dessa forma, observou-se que a inclusão de outras variáveis relacionadas a dinâmica de preçõs do milho não teve relevância na performance do modelo, no entanto a abordagem multivariada agregou conhecimento ao permitir a observância das relações entre as variáveis.
 
 Com o avanço no uso de estruturas de deep learning, as redes neurais LSTM tem sido amplamente empregadas em diversas áreas do conhecimento. Pesquisas recentes tem abordado arquiteturas baseadas em combinações de redes LSTM com redes autoenconders. Como trabalhos futuros, propõe-se que a abordagem univariada e multivariada aplicada neste trabalho seja testificada em novas arquiteturas de redes neurais, sugerindo-se a inclusão de outros métodos de inferência aplicados à dinâmica de preços do milho. 
 
