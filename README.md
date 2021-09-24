@@ -113,7 +113,7 @@ Para ajustar os parâmetros de treinamento e diminuir o erro do modelo, foram re
 | Units | 140 | 100 |
 | Dropout | 0.2 | 0.2 |
 | Epochs | 160 | 140 |
-| Batch size | 16 | 16 |
+| Batch size | 16 | 32 |
 | RMSE | 0.174 | 0.148 |
 | MAPE | 16.82% | 16.33% |
 
