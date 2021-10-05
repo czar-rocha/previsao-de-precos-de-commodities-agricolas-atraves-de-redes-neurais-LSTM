@@ -6,7 +6,7 @@
 
 Trabalho apresentado ao curso [BI MASTER](https://ica.puc-rio.ai/bi-master) como pré-requisito para conclusão de curso e obtenção de crédito na disciplina "Projetos de Sistemas Inteligentes de Apoio à Decisão".
 
-Link do projeto do Github: [https://github.com/czar-rocha/previsao-de-precos-de-commodities-agricolas-atraves-de-redes-neurais-LSTM](https://github.com/czar-rocha/previsao-de-precos-de-commodities-agricolas-atraves-de-redes-neurais-LSTM).
+Link do projeto do github: [https://github.com/czar-rocha/previsao-de-precos-de-commodities-agricolas-atraves-de-redes-neurais-LSTM](https://github.com/czar-rocha/previsao-de-precos-de-commodities-agricolas-atraves-de-redes-neurais-LSTM).
 
 ### Resumo
 
